@@ -1,4 +1,6 @@
-# gardener-kubevirt-local
+# bento-box
+
+Setup a local Gardener landscape inside you Minikube without any dependencies to external cloud services (like compute, DNS and load balancers).
 
 ## Setup Minikube with KVM2 (Linux)
 
