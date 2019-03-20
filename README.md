@@ -22,3 +22,10 @@ Important to note here is, that we are using the user emulation mode in Qemu to 
 
 ## Setup Metal-LB
 
+In order to handle service objects of type `LoadBalancer` we will be using [metallb](https://github.com/google/metallb) in layer-2 mode. To install metallb into your minikube and configure the correct IP range run
+
+```bash
+./install-metallb.sh
+```
+
+More information on the metallb configuration and setup can be found [here](docs/metallb_installation.md).
