@@ -1,0 +1,19 @@
+apiVersion: garden.sapcloud.io/v1beta1
+kind: Seed
+metadata:
+  generation: 1
+  name: kubevirt
+spec:
+  cloud:
+    profile: kubevirt
+    region: minikube
+  ingressDomain: ingress.INGRESSIP.nip.io
+  networks:
+    nodes: 10.250.0.0/19
+    pods: 100.96.0.0/11
+    services: 100.64.0.0/13
+  protected: false
+  secretRef:
+    name: seed-kubevirt
+    namespace: garden
+  visible: true
