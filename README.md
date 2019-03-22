@@ -45,6 +45,8 @@ Since we will use the Minikube box as a seed cluster, we need to install an ngin
 
 ## Install Helm
 
+Since we need helm to install the Gardener helm chart
+
 ```bash
 ./install-helm.sh
 ```
