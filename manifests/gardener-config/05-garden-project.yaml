@@ -1,0 +1,18 @@
+apiVersion: garden.sapcloud.io/v1beta1
+kind: Project
+metadata:
+ name: garden
+spec:
+ createdBy:
+  apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: garden:client:admin
+ members:
+ - apiGroup: rbac.authorization.k8s.io
+   kind: User
+   name: garden:client:admin
+ namespace: garden
+ owner:
+  apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: garden:client:admin

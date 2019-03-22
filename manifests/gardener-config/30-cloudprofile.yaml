@@ -1,0 +1,29 @@
+apiVersion: garden.sapcloud.io/v1beta1
+kind: CloudProfile
+metadata:
+  name: kubevirt
+spec:
+  kubevirt:
+    constraints:
+      dnsProviders:
+      - name: unmanaged
+      kubernetes:
+        versions:
+        - 1.13.4
+        - 1.12.5
+        - 1.11.6
+      machineImages:
+      - image: dgonzalez/coreos-cloud-container-disk:1967.4.0
+        name: coreos
+      machineTypes:
+      - cpu: "1"
+        gpu: "0"
+        memory: 2G
+        name: small_1_2
+        usable: true
+        volumeSize: 5Gi
+        volumeType: default
+      zones:
+      - names:
+        - local
+        region: minikube

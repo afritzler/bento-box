@@ -1,1 +1,4 @@
+kubeconfig
 manifests/metallb/metallb-cm.effective.yaml
+/gardener
+gen/
