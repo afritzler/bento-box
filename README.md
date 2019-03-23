@@ -1,6 +1,6 @@
-![bento box](docs/images/logo.png)
-
 # bento-box
+
+![bento box](docs/images/logo.png)
 
 Setup a local Gardener landscape inside your Minikube without any dependencies to external cloud services like compute, DNS and load balancers.
 
@@ -14,6 +14,14 @@ Setup a local Gardener landscape inside your Minikube without any dependencies t
 * [Minikube](https://github.com/kubernetes/minikube) on Mac/Linux
   * [Setup Minikube with KVM2 (Linux)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
   * [Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
+
+## Create a Minikube box
+
+First we need to create a Minikube environment. Currently the recommended setup is using 8Gb of RAM and 2 CPU. There is a helper script to help you with that.
+
+```bash
+./create-k8s.sh
+```
 
 ## Install Kubevirt
 
