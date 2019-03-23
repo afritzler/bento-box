@@ -2,7 +2,7 @@
 
 ![bento box](docs/images/logo.png)
 
-Setup a local Gardener landscape inside your Minikube without any dependencies to external cloud services like compute, DNS and load balancers.
+Bento box helps you to setup a local Gardener landscape inside your Minikube without any dependencies to external cloud services like compute, DNS and load balancers.
 
 ## Purpose
 
@@ -14,6 +14,7 @@ Setup a local Gardener landscape inside your Minikube without any dependencies t
 * [Minikube](https://github.com/kubernetes/minikube) on Mac/Linux
   * [Setup Minikube with KVM2 (Linux)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
   * [Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
+* [Helm](https://github.com/helm/helm)
 
 ## Create a Minikube box
 
