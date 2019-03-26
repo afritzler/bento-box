@@ -2,7 +2,7 @@
 
 ![bento box](docs/images/logo.png)
 
-Bento box helps you to setup a local Gardener landscape inside your Minikube without any dependencies to external cloud services like compute, DNS and load balancers.
+Bento box helps you setting up a local Gardener landscape inside your Minikube without any dependencies to external cloud services like compute, DNS and load balancers.
 
 ## Purpose
 
@@ -22,6 +22,14 @@ First we need to create a Minikube environment. Currently the recommended setup 
 
 ```bash
 ./create-k8s.sh
+```
+
+## Mutating WebHook
+
+Lets deploy a MutatingAdmissionWebhook into our Minikube setup which will remove all resource limits from incoming objects, so we don't run into `Pending` pods due to missing CPU capacity.
+
+```bash
+./install-mutator.sh
 ```
 
 ## Install Kubevirt

@@ -6,7 +6,7 @@ if [ -d gardener ]; then
         git pull origin master
     )
 else
-    git clone https://github.com/gardener/gardener.git
+    git clone https://github.com/kubeforge/gardener.git
 fi
 
 helm install --name gardener --namespace garden -f manifests/gardener/local-values.yaml gardener/charts/gardener --replace
