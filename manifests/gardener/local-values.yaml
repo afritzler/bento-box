@@ -4,7 +4,7 @@ global:
   # Gardener API server configuration values
   apiserver:
     image:
-      repository: kubeforge/gardener-apiserver
+      repository: afritzler/gardener-apiserver
       tag: 0.19.0-dev
       pullPolicy: IfNotPresent
     etcd:
@@ -68,14 +68,16 @@ global:
   # Gardener controller manager configuration values
   controller:
     image:
-      repository: kubeforge/gardener-controller-manager
+      repository: afritzler/gardener-controller-manager
       tag: 0.19.0-dev
-      pullPolicy: IfNotPresent
+      pullPolicy: Always
     internalDomain:
       provider: unmanaged
       hostedZoneID: ABCDEFGHIJ
       domain: nip.io
     config:
+      seed:
+        reserveExcessCapacity: false
       server:
         http:
           bindAddress: 0.0.0.0
