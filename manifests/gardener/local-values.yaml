@@ -76,8 +76,9 @@ global:
       hostedZoneID: ABCDEFGHIJ
       domain: nip.io
     config:
-      seed:
-        reserveExcessCapacity: false
+      controllers:
+        seed:
+          reserveExcessCapacity: false
       server:
         http:
           bindAddress: 0.0.0.0
