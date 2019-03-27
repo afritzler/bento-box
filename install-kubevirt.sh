@@ -8,4 +8,4 @@ kubectl apply -f manifests/kubevirt/kubevirt-cm.yaml
 sleep 5
 kubectl apply -f https://github.com/kubevirt/kubevirt/releases/download/$VERSION/kubevirt-cr.yaml
 
-kubectl create ns pool
+kubectl create ns vms
