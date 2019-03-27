@@ -32,6 +32,8 @@ Lets deploy a MutatingAdmissionWebhook into our Minikube setup which will remove
 ./install-mutator.sh
 ```
 
+The mutating webhook is implemented as a Google Cloud Function for now. The code for that can be found [here](https://github.com/afritzler/request-limits-mutator). In future this can be also be moved into the cluster itself.
+
 ## Install Kubevirt
 
 In order to create VM instances inside our Minikube we need to install [Kubvirt](https://github.com/kubevirt/kubevirt). The `install-kubevirt.sh` script will help you with that.
