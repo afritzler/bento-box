@@ -11,9 +11,13 @@ Bento box helps you setting up a local Gardener landscape inside your Minikube w
 
 ## Prerequisites
 
+You will need a local Kubernetes setup on your machine. Here Minikube or kind can be used.
+
 * [Minikube](https://github.com/kubernetes/minikube) on Mac/Linux
+  * Setup Minikube with VirtualBox (Linux/Mac)
   * [Setup Minikube with KVM2 (Linux)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
-  * [Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
+  * (currently broken)[Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
+* [kind](https://github.com/kubernetes-sigs/kind) (untested)
 * [Helm](https://github.com/helm/helm)
 
 ## Create a Minikube box
