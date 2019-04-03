@@ -11,21 +11,34 @@ Bento box helps you setting up a local Gardener landscape inside your Minikube w
 
 ## Prerequisites
 
-You will need a local Kubernetes setup on your machine. Here Minikube or kind can be used.
+You will need a local Kubernetes setup on your machine.
 
-* [Minikube](https://github.com/kubernetes/minikube) on Mac/Linux
-  * Setup Minikube with VirtualBox (Linux/Mac)
+* Linux
+  * [kind](https://github.com/kubernetes-sigs/kind)
+  * [Minikube](https://github.com/kubernetes/minikube) with VirtualBox
   * [Setup Minikube with KVM2 (Linux)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
+
+* MacOS
+  * [kind](https://github.com/kubernetes-sigs/kind)
+  * [Docker for Desktop Kubernetes Environment](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)
+  * [Minikube](https://github.com/kubernetes/minikube) with VirtualBox
   * (currently broken)[Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
-* [kind](https://github.com/kubernetes-sigs/kind) (untested)
+
+
 * [Helm](https://github.com/helm/helm)
 
-## Create a Minikube box
+## Create a Minikube/Kind box
 
 First we need to create a Minikube environment. Currently the recommended setup is using 8Gb of RAM and 2 CPU. There is a helper script to help you with that.
 
 ```bash
-./create-k8s.sh
+./create-minikube.sh
+```
+
+Alternatively you can use Kind
+
+```bash
+./create-kind.sh
 ```
 
 ## Mutating WebHook
@@ -84,7 +97,7 @@ To bring up the Gardener API server and Controller Manager
 
 ## Configure Seed, CloudProfile, etc.
 
-The setup is finished up by registering Minikube as our seed, deploying the Kubevirt cloudprofile and put the secrets in place. Since we can't use the Minikube `kubeconfig` which is located under `~/.kube/config` (please don't use merged kubeconfigs here) - we need to convert it the corresponding format.
+(Only for Minikube) The setup is finished up by registering Minikube as our seed, deploying the Kubevirt cloudprofile and put the secrets in place. Since we can't use the Minikube `kubeconfig` which is located under `~/.kube/config` (please don't use merged kubeconfigs here) - we need to convert it the corresponding format.
 
 ```bash
 ./convertkubeconfig.sh

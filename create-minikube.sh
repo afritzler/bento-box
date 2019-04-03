@@ -1,6 +1,10 @@
 #!/bin/bash
 
-args="--cpus 3 --memory 8192"
+if [ -f ./gen/kind ]; then
+    rm ./gen/kind
+fi
+
+args="--cpus 3 --memory 8192 --kubernetes-version v1.13.4"
 
 os="$(uname -s)"
 case "${os}" in
