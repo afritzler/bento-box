@@ -15,9 +15,9 @@ case "${os}" in
              sed -i 's/CA/'"$ca"'/g' ./kubeconfig
              sed -i 's/CERT/'"$cert"'/g' ./kubeconfig
              sed -i 's/CKEY/'"$cert_key"'/g' ./kubeconfig;;
-    Darwin*) sed -i '' 's/MINIKUBE_IP/'"$minikube_ip"'/g' ./kubeconfig
-             sed -i '' 's/CA/'"$ca"'/g' ./kubeconfig
-             sed -i '' 's/CERT/'"$cert"'/g' ./kubeconfig
-             sed -i '' 's/CKEY/'"$cert_key"'/g' ./kubeconfig;;
+    Darwin*) sed -i 's/MINIKUBE_IP/'"$minikube_ip"'/g' ./kubeconfig
+             sed -i 's/CA/'"$ca"'/g' ./kubeconfig
+             sed -i 's/CERT/'"$cert"'/g' ./kubeconfig
+             sed -i 's/CKEY/'"$cert_key"'/g' ./kubeconfig;;
     *)       echo "Not supported Operating System ${unameOut}"
 esac

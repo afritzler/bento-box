@@ -16,10 +16,10 @@ spec:
       - image: dgonzalez/coreos-cloud-container-disk:1967.4.0
         name: coreos
       machineTypes:
-      - cpu: "1"
+      - cpu: "2"
         gpu: "0"
-        memory: 2G
-        name: small_1_2
+        memory: 3G
+        name: small_2_3
         usable: true
         volumeSize: 5Gi
         volumeType: default

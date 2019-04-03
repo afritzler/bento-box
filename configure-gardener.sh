@@ -19,8 +19,8 @@ case "${os}" in
              sed -i 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/40-seed-secret.yaml
              sed -i 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/70-core-secret.yaml;;
     Darwin*) sed -i 's/INGRESSIP/'"$ingressip"'/g' ./gen/50-seed.yaml
-             sed -i '' 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/40-seed-secret.yaml
-             sed -i '' 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/70-core-secret.yaml;;
+             sed -i 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/40-seed-secret.yaml
+             sed -i 's/KUBECONFIG/'"$kubeconfig"'/g' ./gen/70-core-secret.yaml;;
     *)       echo "Not supported Operating System ${unameOut}"
 esac
 
