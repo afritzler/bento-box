@@ -14,16 +14,14 @@ Bento box helps you setting up a local Gardener landscape inside your Minikube w
 You will need a local Kubernetes setup on your machine.
 
 * Linux
-  * [kind](https://github.com/kubernetes-sigs/kind)
   * [Minikube](https://github.com/kubernetes/minikube) with VirtualBox
-  * [Setup Minikube with KVM2 (Linux)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
+  * [Minikube on KVM2](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm2-driver)
+  * [kind](https://github.com/kubernetes-sigs/kind)
 
 * MacOS
+  * [Minikube](https://github.com/kubernetes/minikube) with VirtualBox
   * [kind](https://github.com/kubernetes-sigs/kind)
   * [Docker for Desktop Kubernetes Environment](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)
-  * [Minikube](https://github.com/kubernetes/minikube) with VirtualBox
-  * (currently broken)[Setup Minikube with Hyperkit (MacOS)](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
-
 
 * [Helm](https://github.com/helm/helm)
 

@@ -9,6 +9,7 @@ spec:
       - name: unmanaged
       kubernetes:
         versions:
+        - 1.14.0
         - 1.13.4
         - 1.12.5
         - 1.11.6
@@ -16,10 +17,10 @@ spec:
       - image: dgonzalez/coreos-cloud-container-disk:1967.4.0
         name: coreos
       machineTypes:
-      - cpu: "2"
+      - cpu: "1"
         gpu: "0"
-        memory: 3G
-        name: small_2_3
+        memory: 2G
+        name: small_1_2
         usable: true
         volumeSize: 5Gi
         volumeType: default
